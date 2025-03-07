@@ -10,7 +10,8 @@ return {
       },
     },
     images = {
-      enabled = true,
+      -- enabled = true,
+      enabled = false
     },
   },
   keys = function(_, keys)
