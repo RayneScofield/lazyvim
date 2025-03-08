@@ -11,8 +11,8 @@ keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
 
-keymap.set("n", "H", "^", { desc = "Go to start without blank" })
-keymap.set("n", "L", "$", { desc = "Go to end without blank" })
+-- keymap.set("n", "H", "^", { desc = "Go to start without blank" })
+-- keymap.set("n", "L", "$", { desc = "Go to end without blank" })
 
 keymap.set("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move line up", noremap = true, silent = true })
 keymap.set("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move line down", noremap = true, silent = true })
