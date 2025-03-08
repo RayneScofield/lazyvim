@@ -106,7 +106,7 @@ return {
           ["<CR>"] = { "accept_and_enter", "fallback" },
         },
         -- (optionally) automatically show the menu
-        -- completion = { menu = { auto_show = true } },
+        completion = { menu = { auto_show = true } },
         sources = function()
           local type = vim.fn.getcmdtype()
           -- Search forward and backward
@@ -121,7 +121,7 @@ return {
         end,
       },
       completion = {
-        list = { selection = { preselect = true, auto_insert = false } },
+        list = { selection = { preselect = true, auto_insert =  true } },
         menu = {
           scrollbar = false,
           draw = {
