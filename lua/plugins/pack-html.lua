@@ -20,7 +20,7 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      ensure_installed = { "html-lsp", "cssmodules-language-server", "css-lsp" },
+      ensure_installed = { "html-lsp", "cssmodules-language-server", "css-lsp", "emmet-ls" },
     },
   },
   {
