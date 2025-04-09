@@ -6,10 +6,6 @@ local opts = { noremap = true, silent = true }
 -- ray
 keymap.set("i", "<C-l>", "<Right>", { desc = "Move right", noremap = true, silent = true })
 keymap.set("i", "<C-h>", "<Left>", { desc = "Move left", noremap = true, silent = true })
--- Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
 
 -- keymap.set("n", "H", "^", { desc = "Go to start without blank" })
 -- keymap.set("n", "L", "$", { desc = "Go to end without blank" })
