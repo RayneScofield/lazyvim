@@ -1,11 +1,14 @@
-return {}
--- return {
---   recommended = function()
---     return LazyVim.extras.wants({
---       ft = "rust",
---       root = { "Cargo.toml", "rust-project.json" },
---     })
---   end,
---   { import = "lazyvim.plugins.extras.lang.rust" },
---   {},
--- }
+if true then
+  return {}
+end
+
+return {
+  recommended = function()
+    return LazyVim.extras.wants({
+      ft = "rust",
+      root = { "Cargo.toml", "rust-project.json" },
+    })
+  end,
+  { import = "lazyvim.plugins.extras.lang.rust" },
+  {},
+}
