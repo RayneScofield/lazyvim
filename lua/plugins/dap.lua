@@ -386,56 +386,7 @@ return {
     },
     config = function(_, opts)
       local dapui = require("dapui")
-      local dap = require("dap")
-
-      local events = {
-        "event_continued",
-        "event_exited",
-        "event_initialized",
-        "event_invalidated",
-        "event_stopped",
-        "event_terminated",
-        "event_thread",
-        "attach",
-        "continue",
-        "disconnect",
-        "initialize",
-        "launch",
-        "next",
-        "pause",
-        "restart",
-        "restartFrame",
-        "stepBack",
-        "stepIn",
-        "stepInTargets",
-        "stepOut",
-        "terminate",
-        "terminateThreads",
-      }
-      for _, event in ipairs(events) do
-        dap.listeners.after[event].dapui_config = function()
-          require("dapui.controls").refresh_control_panel()
-        end
-        dap.listeners.before[event].dapui_config = function()
-          require("dapui.controls").refresh_control_panel()
-        end
-      end
       dapui.setup(opts)
     end,
-  },
-  {
-    "theHamsta/nvim-dap-virtual-text",
-    event = "VeryLazy",
-    opts = {
-      commented = true,
-      enabled = true,
-      enabled_commands = true,
-      only_first_definition = true,
-      clear_on_continue = true,
-      highlight_changed_variables = true,
-      all_frames = false,
-      virt_lines = true,
-      show_stop_reason = true,
-    },
   },
 }
